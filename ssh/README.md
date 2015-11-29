@@ -4,8 +4,18 @@ SSH is used to access files on other machines, for example when you want to remo
 
 # Getting your key
 
+Generate with...
+
+`ssh-keygen -lf ~/.ssh/id_rsa.pub`
 
 # Sharing your key
+
+It'll be the stuff in `~/.ssh/id_rsa.pub`, which means you can just view the file contents to see what it is. Ctrl+c with your keyboard to copy the output
+
+`cat ~/.ssh/id_rsa.pub`
+
+The output key is what you'll need to add into your github profile. 
+
 
 # Saving configurations to speed up access time
 
