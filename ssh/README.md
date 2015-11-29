@@ -7,4 +7,13 @@ SSH is used to access files on other machines, for example when you want to remo
 
 # Sharing your key
 
+# Saving configurations to speed up access time
+
+The settings are usually saved in a file located at `~/.ssh/config` where *config* is the filename (no file extensions).
+
+Other files to know:
+
+*known_hosts*
+
+*authorized_keys*
 
