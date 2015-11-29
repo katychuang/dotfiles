@@ -11,4 +11,8 @@ Note that you should periodically update your brew indexes, which can be done wi
 
 It'll like like `brew install phantomjs` where the 3rd word is the package you want to install.
 
+## Installing from a file
+
+`cat list.txt | xargs brew install`
+
 
