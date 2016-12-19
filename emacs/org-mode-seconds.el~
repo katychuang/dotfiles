@@ -1,4 +1,0 @@
-;; Show seconds
-(setq system-time-locale "C")
-(setq org-time-stamp-formats
-      '("<%Y-%m-%d %a>" . "<%Y-%m-%d %a %H:%M:%S>"))
