@@ -1,3 +1,9 @@
 casperjs
+fswatch
+httpie
+imagemagick
+libpq
+jq
 phantomjs
+the_silver_searcher
 tmux
