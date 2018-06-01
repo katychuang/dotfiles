@@ -13,6 +13,6 @@ It'll look like `brew install phantomjs` where the 3rd word is the package you w
 
 ## Installing from a file
 
+It's possible to install from a list as well, such as this example:
+
 `cat list.txt | xargs brew install`
-
-
