@@ -14,11 +14,22 @@ Preferred way of installing apps and libraries is with [Homebrew]() where possib
 
 [Homebrew-Bundle](https://github.com/Homebrew/homebrew-bundle) is useful, so is [mas-cli](https://github.com/mas-cli/mas)
 
+## Git config
+
+```
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
+```
+
 ## Emacs
 These settings are typically saved in ~/.emacs or ~/.emacs.d/init.el
 
 ## Vim
 These settings are typically saved in ~/.vimrc
 
+
+# New Mac Machine
+
+A bunch of things are installed for first time use, see `new_mac.sh` script. Installations are pulled from Homebrew where possible.
 
 
