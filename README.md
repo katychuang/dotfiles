@@ -8,6 +8,12 @@ Eventually I'd like to automate the installations but for now I've got examples 
 
 # Notes
 
+## Homebrew
+
+Preferred way of installing apps and libraries is with [Homebrew]() where possible.
+
+[Homebrew-Bundle](https://github.com/Homebrew/homebrew-bundle) is useful, so is [mas-cli](https://github.com/mas-cli/mas)
+
 ## Emacs
 These settings are typically saved in ~/.emacs or ~/.emacs.d/init.el
 
