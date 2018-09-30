@@ -39,7 +39,9 @@ else
 
 fi
 
-# Data Science Set up
+# ==============================================================================
+# Data Science Set up (currently using Homebrew Bundle)
+
 # Google Cloud SDK from https://cloud.google.com/sdk/docs/
 # curl https://sdk.cloud.google.com | bash
 # add ~/google-cloud-sdk/ to path
@@ -47,8 +49,6 @@ fi
 # echo "export PATH=$PATH:~/google-cloud-sdk/" >> ~/.config/fish/config.fish
 
 # Anaconda https://repo.anaconda.com/archive/Anaconda3-5.2.0-MacOSX-x86_64.pkg
-
-
 
 # ==============================================================================
 # Haskell Development Tools
