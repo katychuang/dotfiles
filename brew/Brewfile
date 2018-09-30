@@ -1,0 +1,86 @@
+cask_args appdir: "/Applications"
+
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/core"
+tap 'homebrew/services'
+tap "caskformula/caskformula"
+tap "caskroom/cask"
+tap "caskroom/fonts"
+tap "caskroom/versions"
+tap "d12frosted/emacs-plus"
+
+brew "autojump"
+brew "casperjs"
+brew "emacs-plus"
+brew "fish"
+brew "ffmpeg"
+brew "fswatch"
+brew "geoip"
+brew "git"
+brew "httpie"
+brew "icu4c"
+brew "imagemagick"
+brew "ispell"
+brew "libpq"
+brew "llvm"
+brew "jq"
+brew "mas"
+brew "nmap"
+brew "node"
+brew "phantomjs"
+brew "pandoc"
+brew "pcre"
+brew "pgbouncer"
+brew "prettier"
+brew "purescript", link: false
+brew "q"
+brew "redis"
+brew "ripgrep"
+brew "sleepwatcher"
+brew "speedtest_cli"
+brew "the_silver_searcher"
+brew "tmux"
+brew "tree"
+brew "wget"
+brew "xsv"
+
+# Mac applications
+cask "alfred" unless system 'test -e /Applications/Alfred*.app'
+cask "anaconda"
+cask "atom" unless system 'test -e /Applications/Atom.app'
+cask "chromedriver"
+cask "dropbox" unless system 'test -e /Applications/Dropbox.app'
+cask "dynamodb-local"
+cask "firefox" unless system 'test -e /Applications/Firefox.app'
+cask "google-cloud-sdk"
+cask "google-chrome" unless system 'test -e /Applications/*Chrome.app'
+cask "google-drive"
+cask "handbrake"
+cask "handbrakebatch"
+cask "handbrakecli"
+cask "iterm2"  unless system 'test -e /Applications/iTerm.app'
+cask "itsycal"
+cask "java8" unless system "/usr/libexec/java_home --failfast"
+cask "kindle"
+cask "libreoffice"
+cask "licecap"
+cask "microsoft-office"
+cask "rescuetime" unless system 'test -e /Applications/RescueTime.app'
+cask "sketch" unless system 'test -e /Applications/Sketch.app'
+cask "sketch-toolbox"
+cask "skype"
+cask "slack"
+cask "spotify" unless system 'test -e /Applications/Spotify.app'
+cask "tableau"
+cask "vlc" unless system 'test -e /Applications/VLC.app'
+cask "zoomus"
+
+# Fonts
+cask 'font-roboto-mono'
+cask 'font-source-code-pro'
+cask 'font-inconsolata'
+
+# Appstore
+mas "1Password", id:1333542190 #v7
