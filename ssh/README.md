@@ -6,7 +6,12 @@ SSH is used to access files on other machines, for example when you want to remo
 
 Generate with...
 
-`ssh-keygen -lf ~/.ssh/id_rsa.pub`
+```
+ssh-keygen -t rsa -b 4096 -C "email@mail.com"
+eval "$(ssh-agent -s)"
+ssh-add -K ~/.ssh/id_rsa
+pbcopy < ~/.ssh/id_rsa.pub
+```
 
 # Sharing your key
 
@@ -14,7 +19,7 @@ It'll be the stuff in `~/.ssh/id_rsa.pub`, which means you can just view the fil
 
 `cat ~/.ssh/id_rsa.pub`
 
-The output key is what you'll need to add into your github profile. 
+The output key is what you'll need to add into your github profile.
 
 
 # Saving configurations to speed up access time
@@ -26,4 +31,3 @@ Other files to know:
 *known_hosts*
 
 *authorized_keys*
-
