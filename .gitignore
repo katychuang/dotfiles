@@ -3,3 +3,6 @@
 
 # Packaging
 .cask
+
+# files to keep the root folder clean
+Brewfile
