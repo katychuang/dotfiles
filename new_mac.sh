@@ -107,6 +107,11 @@ function install() {
 	  # omf install virtualfish
 	  omf install weather
 
+          # iterm shell integration
+          # https://www.iterm2.com/documentation-shell-integration.html
+          curl -L https://iterm2.com/shell_integration/fish -o ~/.iterm2_shell_integration.fish
+          echo "source ~/.iterm2_shell_integration.(basename $SHELL)" >> ~/.config/fish/config.fish
+
 	fi
 
 	# Data Science Set up
