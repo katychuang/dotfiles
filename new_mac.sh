@@ -36,7 +36,7 @@ function separator() {
 
 function hello() {
   green_color
-  echo "Starting install"
+  echo "Starting installations"
   blue_color
   echo "This script will guide you through the installation process"
 
@@ -59,6 +59,28 @@ function result() {
     exit 1
 }
 
+function brewing(){
+  # https://github.com/Homebrew/homebrew-bundle
+  brew tap homebrew/bundle
+
+  # Macstore commandline interface needed https://github.com/mas-cli/mas
+  which -s mas
+  if [[ $? != 0 ]] ; then
+	   brew install mas
+   else
+     brew upgrade mas
+   fi
+
+  if [[ $(ls Brewfile) == "" ]] ; then
+     # link source_file target_file
+	   ln -s brew/Brewfile.example.txt Brewfile
+  fi
+  brew bundle
+	# brew bundle install  # redundant
+
+	#brew doctor
+}
+
 function install() {
 
 	# install brew
@@ -67,17 +89,22 @@ function install() {
 	    # Install Homebrew
 	    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	else
+    green_color
+    read -p "Do you want to update Homebrew right now? (y/N) " -n 1 answer2
+    echo
+    if [ ${answer2} == "y" ]; then
+      blue_color
 	    echo "Updating Homebrew"
+      green_color
 	    brew update
+    fi
 	fi
 
-	brew tap homebrew/bundle
-	brew bundle
-	brew install mas
-	ln -s brew/Brewfile Brewfile
-	brew bundle install
+  reset_color
+  echo "brewing..."
+  green_color
 
-	#brew doctor
+  brewing
 
 	# ==============================================================================
 	# Shell environment setup
@@ -113,6 +140,25 @@ function install() {
           echo "source ~/.iterm2_shell_integration.(basename $SHELL)" >> ~/.config/fish/config.fish
 
 	fi
+
+	# ==============================================================================
+	# Emacs Set up
+
+  # link to Applications
+  brew linkapps emacs-plus
+
+  # Install Spacemacs
+  git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+
+  green_color
+  read -p "Copy sample emacs file?? (y/N) " -n 1 answer
+  echo
+  if [ ${answer} == "y" ]; then
+    cp emacs spacemacs.config ~/.spacemacs
+  else
+    exit 1
+  fi
+  reset_color
 
 	# Data Science Set up
 	# Google Cloud SDK from https://cloud.google.com/sdk/docs/
