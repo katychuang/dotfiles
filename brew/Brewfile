@@ -13,8 +13,10 @@ tap "d12frosted/emacs-plus"
 
 brew "autojump"
 brew "emacs-plus"
-brew "fish"
+brew "exiv2"
 brew "ffmpeg"
+brew "fish"
+brew "font-fira-code"
 brew "fswatch"
 brew "geoip"
 brew "git"
@@ -36,6 +38,7 @@ brew "purescript", link: false
 brew "q"
 brew "redis"
 brew "ripgrep"
+brew "ruby"
 brew "sleepwatcher"
 brew "speedtest_cli"
 brew "the_silver_searcher"
@@ -48,6 +51,7 @@ brew "xsv"
 cask "alfred" unless system 'test -e /Applications/Alfred*.app'
 cask "anaconda"
 cask "atom" unless system 'test -e /Applications/Atom.app'
+cask "cyberduck"
 cask "chromedriver"
 cask "dropbox" unless system 'test -e /Applications/Dropbox.app'
 cask "dynamodb-local"

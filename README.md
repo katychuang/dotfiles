@@ -33,3 +33,4 @@ These settings are typically saved in ~/.vimrc
 A bunch of things are installed for first time use, see `new_mac.sh` script. Installations are pulled from Homebrew where possible.
 
 
+git clone git@github.com:katychuang/dotfiles.git
